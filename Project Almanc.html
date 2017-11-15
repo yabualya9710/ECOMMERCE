@@ -1,0 +1,75 @@
+<!doctype HTML>
+
+<html>
+    <head>
+        <title> Title </title>
+    <style>
+        img{
+            width:150px;
+        }
+        input{
+            width:50px;
+        }
+        div{
+            background-color: ;
+            width:300px;
+        }
+    </style>
+<script>
+    function initPrices(){
+        pr1 = 250;
+        pr2 = 200;
+        pr3 = 400;
+        document.getElementById("ps4").innerHTML = "Price: $" + pr1;
+        document.getElementById("ps4 slim").innerHTML = "Price: $" + pr2;
+        document.getElementById("ps4 pro").innerHTML = "Price: $" + pr3;
+    }    
+    function ProcessOrder(){
+        var build = " ";
+        build += "Customer info";
+        build += "Subtotal: $ " + customerSubtotal;
+        build += "<br>"
+        build += "Tax: $" + tax;
+        build += "<br>"
+        build += "Shipping: $" + ShippingCost;
+        build += "<br>"
+        build += "Total: $" + price;
+        op.innerHTML = build;
+    }
+</script>
+</head>
+<body onload="initPrices()">
+    <h1></h1>
+    
+
+    <h2 class="item_name"> PS4 500 GB</h2>
+    
+        
+    </select>
+    <button onclick="ProcessOrder()">Add to cart</button>
+</div>
+    <div>
+        <img src="https://media.playstation.com/is/image/SCEA/playstation-4-slim-vertical-product-shot-01-us-07sep16?$TwoColumn_Image$"><br>
+        <p>$200 </p><br>
+        <span id="span1">  </span>
+        QTY:<input type="text" id="qty1" placeholder="#">
+    </div>
+    <hr>
+    <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/1200px-PS4-Console-wDS4.jpg"><br>
+        <p>$250 </p><br>
+        <span id="span2">  </span>
+        QTY:<input type="text" id="qty2" placeholder="#">
+    </div>
+    <hr>
+    <div>
+        <img src="https://media.playstation.com/is/image/SCEA/playstation-4-pro-vertical-product-shot-01-us-07sep16?$TwoColumn_Image$"><br>
+        <p>$400  </p><br>
+        <span id="span3"></span>
+        QTY:<input type="text" id="qty3" placeholder="#">
+    </div>
+    <button onclick="ProcessOrder()">Buy</button>
+    <br>
+    <div id="output"></div>
+</body>
+</html>
